@@ -1,0 +1,13 @@
+:root {
+    --theme-primary: #d7b1f3;
+    --theme-primary-tint: #e9e0ff;
+    --theme-black: #333;
+    --theme-grey: #999;
+    --theme-grey-light: #B4B4B4;
+    --theme-white: #fff;
+    --theme-shadow: #777777;
+    --theme-overlay: rgba(30, 30, 30, .8);
+    --theme-text-color: var(--theme-black);
+
+    --header-size: 7vh;
+}
