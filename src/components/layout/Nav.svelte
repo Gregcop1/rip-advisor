@@ -17,8 +17,8 @@
     >
         <h1>r.i.p. advisor</h1>
         <ul>
-            <li><a href='..'><i class="material-icons">home</i> Accueil</a></li>
-            <li><a href='..'><i class="material-icons">place</i> Lieux</a></li>
+            <li><a href='.'><i class="material-icons">home</i> Accueil</a></li>
+            <li><a href='places'><i class="material-icons">place</i> Lieux</a></li>
             <li><a href='about'><i class="material-icons">info</i> À propos</a></li>
         </ul>
     </nav>
