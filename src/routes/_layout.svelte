@@ -1,5 +1,6 @@
 <script>
     import { stores } from '@sapper/app';
+    import { fly } from 'svelte/transition'
     import { title } from '../stores/header';
 	import Header from '../components/layout/Header.svelte';
 	import Nav from '../components/layout/Nav.svelte';
@@ -13,7 +14,12 @@
 
 <Header />
 
-<main class:white={$page.path === '/'}>
+<main
+        class:white={$page.path === '/'}
+        class:withScroll={$page.path === '/places'}
+        in:fly={{ delay: 1000, duration: 2000, y: 40, opacity: 0 }}
+        out:fly={{ delay: 1000, duration: 2000, y: -40, opacity: 0 }}
+>
 	<slot></slot>
 </main>
 <Nav />
@@ -38,11 +44,27 @@
         vertical-align: middle;
     }
 
+    :global(.flex) {
+        display: flex;
+    }
+
+    :global(.flex-column) {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    :global(.flex-empty) {
+        flex: 1;
+    }
+
 	main {
 	    position: relative; padding: 20px;
 	    height: calc(100vh - var(--header-size));
-		overflow: auto;
 	}
+
+    .withScroll {
+		overflow: auto;
+    }
 
 	.white {
         background: var(--theme-white);

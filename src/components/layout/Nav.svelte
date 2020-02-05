@@ -57,7 +57,7 @@ li a {
     color: var(--theme-black); text-decoration: none;
 }
 li a:hover {
-    background: var(--theme-grey-light);
+    background: var(--theme-grey-lightest);
 }
 li .material-icons {
     margin-right: 10px;

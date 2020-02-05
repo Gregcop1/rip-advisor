@@ -1,18 +1,21 @@
 <script>
+    import {fadeIn, fadeOut} from './_pageTransition';
     import { title } from '../stores/header';
     import Logo from '../components/layout/Logo.svelte';
 
     title.set('');
 </script>
 
-<div class="content">
-    <Logo />
+<div class="flex flex-column" in:fadeIn out:fadeOut>
+    <div class="flex-empty"/>
+    <div class="content">
+        <Logo />
+    </div>
+    <div class="flex-empty"/>
 </div>
 
 <style>
     .content {
-        position: absolute; top: 50%; left: 0; right: 0;
-        transform: translateY(-50%);
         text-align: center;
     }
 </style>
