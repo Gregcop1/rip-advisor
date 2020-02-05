@@ -7,11 +7,11 @@
 </script>
 
 <div class="flex flex-column" in:fadeIn out:fadeOut>
-    <div class="flex-empty"/>
+    <div class="flex-fill"/>
     <div class="content">
         <Logo />
     </div>
-    <div class="flex-empty"/>
+    <div class="flex-fill"/>
 </div>
 
 <style>

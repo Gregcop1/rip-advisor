@@ -17,6 +17,7 @@
 <main
         class:white={$page.path === '/'}
         class:withScroll={$page.path === '/places'}
+        class:withoutPadding={$page.path.startsWith('/places/')}
         in:fly={{ delay: 1000, duration: 2000, y: 40, opacity: 0 }}
         out:fly={{ delay: 1000, duration: 2000, y: -40, opacity: 0 }}
 >
@@ -33,6 +34,10 @@
     .withScroll {
 		overflow: auto;
     }
+
+	.withoutPadding {
+		padding: 0;
+	}
 
 	.white {
         background: var(--theme-white);

@@ -1,33 +1,48 @@
 <script>
-    let className = '';
+    import CardFooter from "./CardFooter.svelte";
 
-    export {className as class};
+    let className = '';
+    import { scale } from 'svelte/transition';
+
+    export { className as class };
+    export let full = false;
+    export let media = null;
     export let noPadding = false;
     export let noPaddingTop = false;
     export let noPaddingBottom = false;
-    export let media = null;
-    export let title = null;
     export let subtitle = null;
+    export let title = null;
+    export let actions = [];
 </script>
 
 
-<div class="card {className}" class:noPadding class:noPaddingTop class:noPaddingBottom on:click on:mouseover on:mouseout>
+<div class="card {className}"
+     class:full
+     class:noPadding
+     class:noPaddingTop
+     class:noPaddingBottom
+     on:click
+     on:mouseover
+     on:mouseout
+>
     {#if media}
         <div class="media">
             <img src={media} alt="" />
         </div>
     {/if}
     {#if title || subtitle}
-        <div class="header">
-
-            {#if title}<h2>{title}</h2>{/if}
-            {#if subtitle}<h3>{subtitle}</h3>{/if}
+        <div class="header flex">
+            <div class="title flex-fill">
+                {#if title}<h2>{title}</h2>{/if}
+                {#if subtitle}<h3>{subtitle}</h3>{/if}
+            </div>
+            <slot name="title-end"></slot>
         </div>
     {/if}
     <div class="content">
         <slot></slot>
     </div>
-    <slot name="footer"></slot>
+    <CardFooter {actions} />
 </div>
 
 <style>
@@ -79,13 +94,24 @@
         font-weight: 300;
     }
 
-    .content :global(:first-child) {
+    .content > :global(*:first-child) {
         margin-top: 0;
     }
 
-    .content :global(:last-child) {
+    .content > :global(*:last-child) {
         margin-bottom: 0;
     }
+
+    .full {
+        margin: 0;
+        width: 100%; max-width: 100%;
+        border-radius: 0;
+    }
+
+    .full .media img {
+        border-radius: 0;
+    }
+
 
     .elevation-1 { box-shadow: 0 1px 3px var(--theme-shadow); }
     .elevation-2 { box-shadow: 0 3px 5px var(--theme-shadow); }

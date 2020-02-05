@@ -6,7 +6,8 @@ export default [
     "description": "Premier crématorium construit dans le Pas-de-Calais, le crématorium de Vendin vous accueil dans un ambiance chaleureuse et respectueuse.",
     "image": "/places/loos.jpg",
     "tags": ["jardin du souvenir", "respect"],
-    "note": 4
+    "notes": [4, 5, 2, 4],
+    "slug": "crematorium-vendin-le-vieil"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@ export default [
     "description": "",
     "image": "/places/ligones.jpg",
     "tags": ["ensoleillé", "boisé", "proprio absent"],
-    "note": 1
+    "notes": [1, 0, 1],
+    "slug": "terrasse-xddl"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@ export default [
     "description": "",
     "image": "/places/le-havre.jpg",
     "tags": ["ensoleillé", "calme", "moderne"],
-    "note": 3
+    "notes": [3, 3, 2],
+    "slug": "funerarium-le-havre"
   },
   {
     "id": 4,
@@ -33,6 +36,7 @@ export default [
     "description": "",
     "image": "/places/lasalle.jpg",
     "tags": ["cosy", "calme"],
-    "note": 4
+    "notes": [4, 3, 4, 5],
+    "slug": "chambre-funeraire-lasalle"
   }
 ];

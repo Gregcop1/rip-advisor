@@ -13,6 +13,17 @@ img, svg {
 	height: auto;
 }
 
+.button-icon {
+	padding: 5px;
+	background: none; border: 0; outline: 0;
+}
+
+a.button-icon {
+	padding: 0;
+	font-size: 2rem;
+	text-decoration: none;
+}
+
 .material-icons {
 	vertical-align: middle;
 }
@@ -26,6 +37,6 @@ img, svg {
 	height: 100%;
 }
 
-.flex-empty {
+.flex-fill {
 	flex: 1;
 }

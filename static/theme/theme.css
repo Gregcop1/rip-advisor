@@ -1,11 +1,14 @@
 :root {
     --theme-primary: #d1b2f3;
     --theme-primary-tint: #f2e9fe;
+    --theme-primary-tint-dark: #a373d4;
     --theme-black: #333;
     --theme-grey: #999;
     --theme-grey-light: #B4B4B4;
     --theme-grey-lightest: #dedede;
     --theme-white: #fff;
+    --theme-orange: #FF821F;
+    --theme-red: #ff133c;
     --theme-shadow: #777777;
     --theme-overlay: rgba(30, 30, 30, .8);
     --theme-text-color: var(--theme-black);

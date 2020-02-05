@@ -7,7 +7,7 @@
 </script>
 
 <div class="flex flex-column" in:fadeIn out:fadeOut>
-	<div class="flex-empty"/>
+	<div class="flex-fill"/>
 	<div class="content">
 		<Card>
 			<img src="/logo.svg" width="70%" alt= ""/>
@@ -15,7 +15,7 @@
 			<p>On ne sait jamais quand la mort vient nous chercher alors autant se préparer à l'accueillir.</p>
 		</Card>
 	</div>
-	<div class="flex-empty"/>
+	<div class="flex-fill"/>
 </div>
 
 <style>

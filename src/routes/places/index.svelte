@@ -1,5 +1,5 @@
 <script context="module">
-    export async function preload(page, session, query) {
+    export async function preload() {
         const res = await this.fetch('places.json');
         const places = await res.json();
 

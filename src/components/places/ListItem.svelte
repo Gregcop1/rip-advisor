@@ -1,15 +1,19 @@
 <script>
+    import { goto } from '@sapper/app';
     import Card from "../UI/Card.svelte";
 
     export let place;
-    let active = false;
-    const toggle = () => active = !active;
+
+    const goToSingle = () => {
+        goto(`places/${place.slug}`);
+    };
 </script>
 
-<Card   on:click={toggle}
-        class={active ? 'elevation-2' : ''}
+<Card   on:click={goToSingle}
         media={place.image}
         title={place.name}
         subtitle={place.location}
         noPadding
-/>
+>
+    <button slot="title-end" class="button-icon material-icons">navigate_next</button>
+</Card>
