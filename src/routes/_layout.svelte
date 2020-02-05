@@ -25,38 +25,6 @@
 <Nav />
 
 <style>
-    :global(*) {
-        box-sizing: border-box;
-    }
-
-    :global(body) {
-        margin: 0; padding: 0;
-        background-color: var(--theme-primary-tint);
-        font-family: Roboto; color: var(--theme-text-color);
-    }
-
-    :global(img, svg) {
-        max-width: 100%;
-        height: auto;
-    }
-
-    :global(.material-icons) {
-        vertical-align: middle;
-    }
-
-    :global(.flex) {
-        display: flex;
-    }
-
-    :global(.flex-column) {
-        flex-direction: column;
-        height: 100%;
-    }
-
-    :global(.flex-empty) {
-        flex: 1;
-    }
-
 	main {
 	    position: relative; padding: 20px;
 	    height: calc(100vh - var(--header-size));
