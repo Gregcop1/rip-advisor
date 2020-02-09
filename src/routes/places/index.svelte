@@ -1,18 +1,10 @@
-<script context="module">
-    export async function preload() {
-        const res = await this.fetch('places.json');
-        const places = await res.json();
-
-        return { places }
-    }
-</script>
-
 <script>
-    export let places = [];
-
+    import placeData from '../../data/places';
     import {fadeIn, fadeOut} from '../_pageTransition';
     import { title } from '../../stores/header';
     import List from "../../components/places/List.svelte";
+
+    const places = placeData;
 
     title.set('Lieux');
 </script>
